@@ -1,0 +1,144 @@
+.image-message {
+  padding-top: 10px;
+  position: absolute;
+  bottom: 80px;
+  width: 50%;
+}
+
+.image-preview {
+  position: relative;
+  width: 30%;
+
+  img {
+    aspect-ratio: 2/1;
+    width: 100%;
+  }
+
+  .clear-img-button {
+    position: absolute;
+    padding: 5px 7px;
+    border-radius: 5px;
+    background-color: rgb(161, 10, 10);
+    border: 0;
+    outline: 0;
+    color: white;
+    cursor: pointer;
+    top: 5px;
+    right: 5px;
+    z-index: 100;
+
+    &:hover {
+      background-color: rgb(128, 0, 0);
+    }
+  }
+}
+
+.message-input-container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #222222;
+  border-top: 1px solid #6d6a6a;
+  gap: 10px;
+
+  .message-input {
+    flex: 1;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #222222;
+    color: white;
+    border: 1px solid #6d6a6a;
+    outline: 0;
+  }
+
+  .image-icon {
+    color: #6d6a6a;
+    font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      color: #3f3b3b;
+    }
+  }
+
+  .send-icon {
+    outline: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    background-color: #6d6a6a;
+    font-size: 14px;
+    padding: 6px 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    &:hover {
+      color: #3f3b3b;
+    }
+  }
+}
+
+h1 {
+  color: white;
+  margin: 0 0 10px 0;
+}
+
+.main {
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.App {
+  border: 1px solid #6d6a6a;
+  border-radius: 20px;
+  width: 40%;
+  padding: 10px 10px;
+}
+
+.chat-messages {
+  display: flex;
+  flex-direction: column;
+}
+
+.message {
+  margin: 15px 0;
+  max-width: 50%;
+  align-self: flex-start;
+
+  img {
+    border-radius: 10px;
+    width: 100%;
+    aspect-ratio: 2/1;
+  }
+
+  .username {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: gray;
+  }
+
+  .message-content {
+    .text {
+      background-color: #4c4c4c;
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+    }
+  }
+
+  &.self-message {
+    align-self: flex-end;
+    .message-content {
+      .text {
+        background-color: #5536ff;
+        color: white;
+        padding: 10px;
+        border-radius: 10px;
+      }
+    }
+  }
+}
